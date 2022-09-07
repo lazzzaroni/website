@@ -9,9 +9,10 @@
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error"
   },
+  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   "overrides": [
     {
-      "files": ["*.js", "*.jsx"],
+      "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
       "rules": {
         "simple-import-sort/imports": [
           "error",
@@ -28,6 +29,5 @@
         ]
       }
     }
-  ],
-  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"]
+  ]
 }
