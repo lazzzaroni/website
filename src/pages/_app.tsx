@@ -1,6 +1,4 @@
 // src/pages/_app.tsx
-import "@/styles/globals.css";
-
 import { httpBatchLink } from "@trpc/client/links/httpBatchLink";
 import { loggerLink } from "@trpc/client/links/loggerLink";
 import { withTRPC } from "@trpc/next";
@@ -9,18 +7,21 @@ import { SessionProvider } from "next-auth/react";
 import { ThemeProvider } from "next-themes";
 import superjson from "superjson";
 
+import Navbar from "@/components/Navbar";
 import type { AppRouter } from "@/server/router";
 
 import "@/styles/globals.css";
+
 const MyApp: AppType = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
   return (
     <ThemeProvider attribute="class">
-    <SessionProvider session={session}>
-      <Component {...pageProps} />
-    </SessionProvider>
+      <SessionProvider session={session}>
+        <Navbar />
+        <Component {...pageProps} />
+      </SessionProvider>
     </ThemeProvider>
   );
 };
