@@ -6,18 +6,22 @@ import { loggerLink } from "@trpc/client/links/loggerLink";
 import { withTRPC } from "@trpc/next";
 import type { AppType } from "next/dist/shared/lib/utils";
 import { SessionProvider } from "next-auth/react";
+import { ThemeProvider } from "next-themes";
 import superjson from "superjson";
 
 import type { AppRouter } from "@/server/router";
 
+import "@/styles/globals.css";
 const MyApp: AppType = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
   return (
+    <ThemeProvider attribute="class">
     <SessionProvider session={session}>
       <Component {...pageProps} />
     </SessionProvider>
+    </ThemeProvider>
   );
 };
 
