@@ -17,12 +17,12 @@ const MyApp: AppType = ({
   pageProps: { session, ...pageProps },
 }) => {
   return (
-    <ThemeProvider attribute="class">
-      <SessionProvider session={session}>
+    <SessionProvider session={session}>
+      <ThemeProvider attribute="class">
         <Navbar />
         <Component {...pageProps} />
-      </SessionProvider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </SessionProvider>
   );
 };
 
