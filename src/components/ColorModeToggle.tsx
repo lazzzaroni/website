@@ -6,12 +6,12 @@ const ColorModeToggle = () => {
 
   return (
     <button
-      className="text-white dark:text-black bg-gray-600 dark:bg-slate-200 p-3 rounded-lg m-2 md:m-3"
+      className="flex items-center justify-center transition-all rounded-full w-9 h-9 bg-transparent hover:bg-slate-200 dark:hover:bg-zinc-800 ring-zinc-300"
       onClick={() => {
         setTheme(theme === "light" ? "dark" : "light");
       }}
     >
-      {theme === "dark" ? <FaMoon /> : <FaSun />}
+      {theme === "dark" ? <FaSun size={18} /> : <FaMoon size={16} />}
     </button>
   );
 };

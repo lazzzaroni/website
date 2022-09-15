@@ -19,10 +19,10 @@ const NavItem: FC<{ href: string; text: string; router: NextRouter }> = ({
     <Link href={href === "/home" ? "/" : href}>
       <a
         className={clsx(
-          "text-md md:text-lg m-4 md:m-6",
+          "hidden md:inline-block p-1 sm:px-2 sm:py-1 rounded-lg mx-1 hover:bg-slate-200 dark:hover:bg-zinc-800 transition-all font-medium",
           isActive
-            ? "text-purple-600 dark:text-purple-300 font-semibold"
-            : "hover:text-purple-800 dark:hover:text-purple-400 transition-colors duration-300 hover:underline hover:underline-offset-2"
+            ? "text-purple-500 dark:text-purple-400 font-bold"
+            : "hover:text-inherit"
         )}
       >
         {text}
@@ -36,11 +36,15 @@ const Navbar = () => {
   const links = ["home", "blog", "projects", "about"];
 
   return (
-    <nav className="flex items-center justify-between max-w-lg mx-auto mt-4 capitalize">
-      {links.map((link, index) => (
-        <NavItem href={`/${link}`} text={link} router={router} key={index} />
-      ))}
-
+    <nav className="relative flex items-center justify-between w-full max-w-2xl py-8 mx-auto capitalize border-zinc-200 dark:border-zinc-700 sm:pb-16 text-zinc-900 dark:text-zinc-100">
+      <a href="#skip" className="skip-nav">
+        Skip to content
+      </a>
+      <div className="ml-[-0.60rem]">
+        {links.map((link, index) => (
+          <NavItem href={`/${link}`} text={link} router={router} key={index} />
+        ))}
+      </div>
       <ColorModeToggle />
     </nav>
   );
