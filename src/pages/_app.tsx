@@ -7,7 +7,6 @@ import { SessionProvider } from "next-auth/react";
 import { ThemeProvider } from "next-themes";
 import superjson from "superjson";
 
-import Navbar from "@/components/Navbar";
 import type { AppRouter } from "@/server/router";
 
 import "@/styles/globals.css";
@@ -19,7 +18,6 @@ const MyApp: AppType = ({
   return (
     <SessionProvider session={session}>
       <ThemeProvider attribute="class">
-        <Navbar />
         <Component {...pageProps} />
       </ThemeProvider>
     </SessionProvider>
