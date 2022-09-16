@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         {/* demo content */}
         <div className="flex items-center justify-center">
           <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
-            Hello, World!
+            Hello, Home!
           </h1>
         </div>
       </Container>
