@@ -53,12 +53,12 @@ const Container = (props: Props) => {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <div className="flex flex-col justify-center px-6">
+      <div className="flex flex-col justify-center px-3">
         <Navbar />
       </div>
       <main
         id="skip"
-        className="flex flex-col justify-center px-8 bg-zinc-50 dark:bg-zinc-900"
+        className="flex flex-col justify-center px-6 bg-zinc-50 dark:bg-zinc-900"
       >
         {children}
       </main>

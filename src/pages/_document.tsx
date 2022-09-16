@@ -12,7 +12,7 @@ export default function Document() {
           crossOrigin="anonymous"
         />
       </Head>
-      <body className="bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">
+      <body className="container max-w-2xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">
         <Main />
         <NextScript />
       </body>
