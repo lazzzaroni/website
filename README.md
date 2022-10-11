@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://portfolio-lazzzaroni.vercel.app" target="_blank">Portfolio Site</a></h1>
+<h1 align="center"><a href="https://website-lazzzaroni.vercel.app" target="_blank">My website</a></h1>
 
 ## Stack
 
@@ -24,11 +24,11 @@ pnpm i
 pnpm dev
 ```
 
-Create a `.env` file similar to [`.env.example`](https://github.com/lazzzaroni/portfolio/blob/main/.env.example).
+Create a `.env` file similar to [`.env.example`](https://github.com/lazzzaroni/website/blob/main/.env.example).
 
 ## Cloning / Forking
 
-This application is licensed under the [Apache-2.0](https://github.com/lazzzaroni/portfolio/blob/main/LICENSE) license.
+This application is licensed under the [Apache-2.0](https://github.com/lazzzaroni/website/blob/main/LICENSE) license.
 
 ## Credits
 
